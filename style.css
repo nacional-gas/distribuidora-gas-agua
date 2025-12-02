@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: #0A0F24; 
+    color: white;
+}
+.header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.content {
+    text-align: center;
+    padding: 25px;
+    animation: fadeIn 1s ease;
+}
+.content h1 {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+.sub {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px 0 25px;
+}
+.btn {
+    background: #00D957;
+    color: #000;
+    padding: 15px 26px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 0 18px rgba(0, 255, 115, 0.5);
+    transition: 0.3s ease;
+}
+.btn:hover {
+    transform: scale(1.05);
+}
+.icons {
+    margin: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.icon-box img {
+    width: 70px;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+}
+.icon-box p {
+    margin-top: 8px;
+    font-weight: 600;
+}
+.zap-fixed {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0,255,125,0.4);
+    animation: float 2s infinite ease-in-out;
+}
+.zap-fixed img {
+    width: 40px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+.consigaz-logo {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 20px;
+    opacity: 0.8;
+}
+
+.consigaz-logo img {
+    width: 140px;
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.2));
+}
+.slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* 🔵 Bolinhas de navegação */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.dot.active {
+    background: #00D957; /* verde neon do botão */
+}
+.voice-maps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-voice {
+    background: #00D957;
+    color: #000;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 217, 87, 0.5);
+    transition: 0.3s ease;
+}
+.btn-voice:hover {
+    transform: scale(1.05);
+}
+.delivery-section {
+    text-align: center;
+    margin: 40px 20px;
+    color: #fff;
+}
+
+.delivery-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.delivery-section p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* Grid de produtos */
+.products-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* Cada produto */
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* redondinho */
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 255, 115, 0.4);
+    transition: 0.3s ease;
+}
+
+.product p {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Efeito hover */
+.product:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0, 255, 115, 0.6);
+}
+
+.product:hover p {
+    color: #00D957;
+}
+
+.footer {
+    text-align: center;
+    padding: 25px 15px;
+    background: #0A0F24;
+    color: #ccc;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer p {
+    margin: 2px 0;
+}
+
+.footer .credits {
+    font-size: 12px;
+    color: #888;
+}
+
+.footer a {
+    color: #00D957;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px #00D957;
+    transform: scale(1.05);
+}
+/* CSS exclusivo do Chatbot para style.css */
+
+/* Caixa do chatbot */
+#chatbot-box {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 260px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.25);
+  display: none;
+  overflow: hidden;
+  z-index: 9999;
+  border: 1px solid #e5e5e5;
+}
+
+/* Cabeçalho */
+#chat-header {
+  background: #333;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+}
+
+/* Área das mensagens */
+#chat-content {
+  padding: 10px;
+  max-height: 260px;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#chat-content p {
+  margin: 6px 0;
+}
+
+#chat-content b {
+  color: #111;
+}
+
+/* Input */
+#chat-input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-top: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+#chat-input::placeholder {
+  color: #999;
+}
